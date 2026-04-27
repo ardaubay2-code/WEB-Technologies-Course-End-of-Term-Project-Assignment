@@ -1,3 +1,62 @@
-h2{
-    color: aqua;
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap');
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #f4f7f6;
+    color: #333;
+}
+
+/* Sayfa içeriğinin menünün altında kalmaması için padding */
+.mt-custom {
+    margin-top: 100px;
+}
+
+/* Glassmorphism Navbar */
+.custom-navbar {
+    background: rgba(255, 255, 255, 0.7); /* Şeffaf beyaz */
+    backdrop-filter: blur(10px); /* Arkadaki içeriği bulanıklaştırır */
+    -webkit-backdrop-filter: blur(10px);
+    border-bottom: 2px solid rgba(13, 110, 253, 0.3); /* Galatasaray kırmızısı hafif dokunuş */
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.navbar-brand {
+    color: #0d6efd !important; /* Okyanus Mavisi */
+    letter-spacing: 2px;
+}
+
+.nav-link {
+    color: #333 !important;
+    font-weight: 500;
+    margin: 0 10px;
+    position: relative;
+}
+
+/* Linklerin altına şık bir çizgi efekti */
+.nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background: #0d6efd;
+    bottom: 0;
+    left: 0;
+    transition: 0.3s;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+.btn-login {
+    background-color: #0d6efd;
+    color: white !important;
+    border-radius: 20px;
+    padding: 8px 20px !important;
+}
+
+.btn-login:hover {
+    background-color: #0b5ed7;
+    transform: scale(1.05);
 }
