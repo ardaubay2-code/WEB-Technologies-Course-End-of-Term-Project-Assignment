@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <title>Şehrim | Arda Ubay</title>
+  
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <nav class="navbar navbar-expand-lg fixed-top custom-navbar">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="index.html">ARDA UBAY</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active" href="index.html">Ana Sayfa</a></li>
+                    <li class="nav-item"><a class="nav-link" href="ozgecmis.html">Öz Geçmiş</a></li>
+                    <li class="nav-item"><a class="nav-link" href="sehrim.html">Şehrim</a></li>
+                    <li class="nav-item"><a class="nav-link" href="takimimiz.html">Takımımız</a></li>
+                    <li class="nav-item"><a class="nav-link" href="ilgi-alanlarim.html">İlgi Alanlarım</a></li>
+                    <li class="nav-item"><a class="nav-link" href="iletisim.html">İletişim</a></li>
+                    <li class="nav-item"><a class="nav-link btn-login" href="login.php">Login</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+  <main class="mt-custom">
+    
+    <header class="tabela-container">
+      <div class="sehir-tabelasi">
+        <h1>Tufanbeyli</h1>
+        <div class="tabela-alt-bilgi">
+          <span>Nüfus: 16.027</span>
+          <span>Rakım: 1474</span>
+        </div>
+      </div>
+    </header>
+
+    <section id="tarihce" class="icerik-bolumu">
+      <h2>📜 Tufanbeyli Tarihçesi</h2>
+      <p>
+        Tarihi Hititlere kadar uzanan Tufanbeyli, Anadolu'nun en eski yerleşim yerlerinden biridir. Özellikle Roma döneminde önemli bir dini merkez olan <strong>Şar (Comana) Antik Kenti</strong> ilçenin tarihi zenginliğini gözler önüne serer. Cumhuriyet döneminde "Mağara" adıyla bilinen yerleşim, Milli Mücadele kahramanlarından Aydınoğlu Tufan Bey'in anısına 1958 yılında ilçe statüsü kazanarak günümüzdeki adını almıştır.Tufanbeyli günümüzde Adana ili sınırları içerisinde yer alır.1958 yılında Saimbeyli ilçesinden ayrılarak ilçe statüsüne kavuşmuştur.İlçe doğusunda Kahramanmaraş'ın Göksun ilçesi,batısında Kayseri'nin Develi ve Tomarza ilçeleri,Kuzeyinde ise Kayseri'nin Sarız ilçesi bulunur.İlçe Adana il merkezine yaklaşık 180 km uzaklıktayken Kayseri iline 150,Kahramanmaraş iline ise 160 km uzaklıktadır.İlçe coğrafik olarak Batı Toroslar'ın devamı niteliğinde olan Tahtalı Dağları ile çevrilmiş engebeli bir arazi üzerine kurulmuştur.İlçede karasal iklim hakimdir.İlçe ekonomik olarak Kayseri ve Adana'nın Kozan ilçesine bağımlı haldedir.Bununla beraber ilçe sınırlarındaki yoğun linyit madenleri sebebiyle ilçeye 2018 yılı itibariyle EnerjiSA tarafından kurulan bir termik santral bulundurmaktadır.Halkın temel geçim kaynağı tarımdır.Tufanbeyli özellikle fasulye üretimi ile ön plana çıkar.
+      </p>
+    </section>
+
+    <section id="meshur" class="icerik-bolumu">
+      <h2>🌟 Neyi İle Meşhur?</h2>
+      <ul>
+        <li><strong>Şar Antik Kenti:</strong> Roma döneminden kalma amfi tiyatro ve kilise kalıntılarıyla adeta bir açık hava müzesidir.</li>
+        <li><strong>Tufanbeyli Fasulyesi:</strong> Yüksek rakımın verdiği avantajla kabuğu incecik olan, lezzeti efsane yöresel fasulyesi.</li>
+        <li><strong>Serin Yayla Havası:</strong> Çukurova'nın o yakıcı sıcağından kaçanlar için rakım 1474'ün getirdiği muazzam serinlik ve buz gibi pınarları.</li>
+        <li><strong>Doğal Güzellikleri:</strong> El değmemiş ormanlık alanları ve doğa tutkunlarının vazgeçilmezi olan Kürebel Yaylası.</li>
+      </ul>
+    </section>
+
+    <section id="sehrim-slider">
+      <h2 style="color: #005A9C;">Tufanbeyli'den Kareler</h2>
+      <div class="slider-container">
+        
+        <div class="slide fade active">
+          <img src="sar-antik.jpg" alt="Şar Antik Kenti">
+        </div>
+        
+        <div class="slide fade">
+          <img src="tufanbeyli-merkez.jpg" alt="Tufanbeyli Merkez">
+        </div>
+        
+        <div class="slide fade">
+          <img src="tufanbeyli-doga.jpg" alt="Tufanbeyli Doğası">
+        </div>
+        
+        <div class="slide fade">
+          <img src="yayla.jpg" alt="Tufanbeyli Yaylaları">
+        </div>
+
+        <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
+        <a class="next" onclick="changeSlide(1)">&#10095;</a>
+      </div>
+    </section>
+
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  
+  <script src="sehrim.js"></script>
+</body>
+</html>
