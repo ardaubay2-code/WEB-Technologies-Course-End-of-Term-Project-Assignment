@@ -28,3 +28,10 @@ function changeSlide(direction) {
   // (Diziler 0'dan başladığı için currentSlide - 1 yazıyoruz)
   slides[currentSlide - 1].classList.add("active");
 }
+
+document.addEventListener("DOMContentLoaded", function() {
+  let slides = document.querySelectorAll(".slide");
+  if(slides.length > 0) {
+    slides[0].classList.add("active");
+  }
+});

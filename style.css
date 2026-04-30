@@ -166,7 +166,7 @@ body {
 .next { right: 0; border-radius: 5px 0 0 5px; }
 .prev:hover, .next:hover { background-color: rgba(0,0,0,0.9); }
 
-.fade { animation: fadeAnim 1s; }
+.slider-fade { animation: fadeAnim 1s; }
 @keyframes fadeAnim { from {opacity: 0.5} to {opacity: 1} }
 
 /* Slider kutusunun maksimum genişliğini kısıtlıyoruz ki devasa olmasın */
@@ -176,10 +176,18 @@ body {
   max-width: 700px; /* 800px büyük geldiyse burayı 600px veya 700px yapabilirsin */
 }
 
-/* Esas sihir burada: Resimleri terbiye ediyoruz */
+
 .slide img {
   width: 100%; /* "İçinde bulunduğun kutunun genişliğini geçme" diyoruz */
-  height: 350px; /* Yüksekliği 450'den 350'ye çektim, gözüne hala büyük gelirse 300px yap */
-  object-fit: cover; /* Resmi sündürmeden, ezmeden kutuya tam oturtur ve taşan kısımları tıraşlar */
-  border-radius: 8px; /* Köşeleri hafif yuvarlatalım, tabelayla uyumlu olsun */
+  height: 700px; /* Yüksekliği 450'den 350'ye çektim, gözüne hala büyük gelirse 300px yap */
+  object-fit: cover; 
+  border-radius: 8px; 
+}
+
+/* Adana Demirspor Özel Tasarımı */
+.demirspor-hero {
+    background: linear-gradient(135deg, #001B48 0%, #005B9F 100%); /* Lacivertten Maviye geçiş */
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    margin-top: 20px;
 }
