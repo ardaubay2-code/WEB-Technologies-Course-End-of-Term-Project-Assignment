@@ -15,13 +15,13 @@
                 <?php
                 if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     echo "<table class='table table-bordered'>";
-                    echo "<tr><th>Ad:</th><td>" . htmlspecialchars($_POST['ad']) . "</td></tr>";
-                    echo "<tr><th>Soyad:</th><td>" . htmlspecialchars($_POST['soyad']) . "</td></tr>";
-                    echo "<tr><th>E-Posta:</th><td>" . htmlspecialchars($_POST['email']) . "</td></tr>";
-                    echo "<tr><th>Telefon:</th><td>" . htmlspecialchars($_POST['telefon']) . "</td></tr>";
-                    echo "<tr><th>Cinsiyet:</th><td>" . htmlspecialchars($_POST['cinsiyet']) . "</td></tr>";
-                    echo "<tr><th>Konu:</th><td>" . htmlspecialchars($_POST['konu']) . "</td></tr>";
-                    echo "<tr><th>Mesaj:</th><td>" . nl2br(htmlspecialchars($_POST['mesaj'])) . "</td></tr>";
+                    echo "<tr><th>Ad:</th><td>" . htmlspecialchars($_POST['ad'] ?? '') . "</td></tr>";
+                    echo "<tr><th>Soyad:</th><td>" . htmlspecialchars($_POST['soyad'] ?? '') . "</td></tr>";
+                    echo "<tr><th>E-Posta:</th><td>" . htmlspecialchars($_POST['email'] ?? '') . "</td></tr>";
+                    echo "<tr><th>Telefon:</th><td>" . htmlspecialchars($_POST['telefon'] ?? '') . "</td></tr>";
+                    echo "<tr><th>Cinsiyet:</th><td>" . htmlspecialchars($_POST['cinsiyet'] ?? '') . "</td></tr>";
+                    echo "<tr><th>Konu:</th><td>" . htmlspecialchars($_POST['konu'] ?? '') . "</td></tr>";
+                    echo "<tr><th>Mesaj:</th><td>" . nl2br(htmlspecialchars($_POST['mesaj'] ?? '')) . "</td></tr>";
                     echo "</table>";
                 } else {
                     echo "<p class='text-danger'>Bu sayfaya doğrudan erişim izni yok.</p>";
