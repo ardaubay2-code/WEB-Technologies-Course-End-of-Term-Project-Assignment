@@ -32,7 +32,7 @@
     <!-- İçerik Alanı -->
     <main class="container mt-custom py-5">
         <div class="text-center mb-5">
-            <h1 class="fw-bold" style="color: #001B48;">Nelerle İlgileniyorum?</h1>
+            <h1 class="fw-bold ilgi-baslik">Nelerle İlgileniyorum?</h1>
             <p class="lead text-muted">Kod yazmak dışında hayatıma renk katan detaylar.</p>
         </div>
 
@@ -52,7 +52,7 @@
             <div class="col-md-6 col-lg-4">
                 <div class="card h-100 shadow-sm border-0 ilgi-karti">
                     <div class="card-body text-center p-4">
-                        <i class="fa-solid fa-user-astronaut fa-3x mb-3" style="color: #6f42c1;"></i>
+                        <i class="fa-solid fa-user-astronaut fa-3x mb-3 renk-scifi"></i>
                         <h4 class="card-title fw-bold">Hard Sci-Fi & Felsefe</h4>
                         <p class="card-text text-muted">Isaac Asimov, Andy Weir, Liu Cixin favori yazarlarım. Üç Cisim Problemi ve Kurtuluş Projesi gibi ufuk açıcı bilim kurgu eserleri okumak benim için büyük bir tutku.</p>
                     </div>
@@ -92,7 +92,7 @@
                 </div>
             </div>
 
-            <!-- API Entegrasyonu Kartı (Hoca için özel) -->
+            
             <div class="col-md-12">
                 <div class="card shadow-sm border-0 ilgi-karti bg-light">
                     <div class="card-body text-center p-4">
@@ -100,8 +100,8 @@
                         <h4 class="card-title fw-bold">Canlı API Entegrasyonu</h4>
                         <p class="card-text text-muted">İnternet üzerinden (The Cat API) anlık olarak çekilen rastgele kedi fotoğrafları:</p>
                         
-                        <!-- Verinin ve resmin geleceği kutu -->
-                        <div id="kedi-api-kutu" class="mt-4" style="min-height: 200px;">
+                        
+                        <div id="kedi-api-kutu" class="mt-4 api-kutu"></div>
                             <div class="spinner-border text-danger" role="status">
                                 <span class="visually-hidden">Yükleniyor...</span>
                             </div>
@@ -136,7 +136,7 @@
                 .then(response => response.json())
                 .then(data => {
                     const imageUrl = data[0].url;
-                    kutu.innerHTML = `<img src="${imageUrl}" alt="Rastgele Kedi (API)" class="img-fluid rounded shadow border" style="max-height: 400px; width: auto; object-fit: cover;">`;
+                    kutu.innerHTML = `<img src="${imageUrl}" alt="Rastgele Kedi (API)" class="img-fluid rounded shadow border api-kedi-foto">`;
                 })
                 .catch(error => {
                     kutu.innerHTML = '<p class="text-danger fw-bold"><i class="fa-solid fa-triangle-exclamation"></i> API bağlantısında hata oluştu.</p>';

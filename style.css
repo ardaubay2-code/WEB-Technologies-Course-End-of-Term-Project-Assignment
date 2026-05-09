@@ -191,3 +191,47 @@ body {
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
     margin-top: 20px;
 }
+
+/* Ana Sayfa - Profil Fotoğrafı */
+.profil-foto {
+    width: 350px;
+    height: 350px;
+    object-fit: cover;
+}
+
+/* Ana Sayfa - Video Konteyner */
+.video-kutu {
+    width: 100%;      
+    max-width: 800px;
+    margin: 0 auto;   
+}
+
+/* --- İLGİ ALANLARIM SAYFASI --- */
+
+/* Ana Başlık Rengi */
+.ilgi-baslik {
+    color: #001B48;
+}
+
+/* Bilim Kurgu İkon Rengi */
+.renk-scifi {
+    color: #6f42c1;
+}
+
+/* API Veri Kutusu Minimum Yükseklik */
+.api-kutu {
+    min-height: 200px;
+}
+
+/* API'den Gelen Kedi Fotoğrafı */
+.api-kedi-foto {
+    max-height: 400px;
+    width: auto;
+    object-fit: cover;
+}
+
+/* Özgeçmiş Sayfası - Okul Logoları */
+.okul-logo {
+    width: 80px;
+    height: auto;
+}s

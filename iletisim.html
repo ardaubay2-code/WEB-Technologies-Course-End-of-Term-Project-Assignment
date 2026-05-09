@@ -36,13 +36,13 @@
         <div class="row justify-content-center">
             <div class="col-lg-8">
                 <div class="card shadow-lg border-0 rounded-lg">
-                    <div class="card-header text-white text-center py-4" style="background-color: #001B48;">
+                    <div class="card-header text-white text-center py-4 iletisim-header"></div>
                         <h2 class="mb-0 fw-bold"><i class="fa-solid fa-paper-plane me-2"></i>Benimle İletişime Geçin</h2>
                     </div>
                     <div class="card-body p-5 bg-white">
                         
                         
-                        <form action="iletisim_islem.php" method="POST" id="iletisimFormu" novalidate></form>>
+                        <form action="iletisim_islem.php" method="POST" id="iletisimFormu" novalidate></form>
                             
                             <div class="row">
                                 <!-- Ad (Text) -->
@@ -104,7 +104,7 @@
 
                             <!-- Mesaj (Textarea) -->
                             <div class="form-floating mb-3">
-                                <textarea class="form-control" placeholder="Mesajınızı buraya yazın" id="mesaj" v-model="form.mesaj" style="height: 120px"></textarea>
+                                <textarea class="form-control mesaj-kutusu" placeholder="Mesajınızı buraya yazın" id="mesaj" v-model="form.mesaj"></textarea>
                                 <label for="mesaj">Mesajınız</label>
                             </div>
 
