@@ -18,7 +18,7 @@
                     <li class="nav-item"><a class="nav-link" href="ozgecmis.html">Özgeçmiş</a></li>
                     <li class="nav-item"><a class="nav-link" href="sehrim.html">Şehrim</a></li>
                     <li class="nav-item"><a class="nav-link" href="takimimiz.html">Takımımız</a></li>
-                    <li class="nav-item"><a class="nav-link" href="ilgi-alanlarim.html">İlgi Alanlarım</a></li>
+                    <li class="nav-item"><a class="nav-link" href="ilgialanlarim.html">İlgi Alanlarım</a></li>
                     <li class="nav-item"><a class="nav-link" href="iletisim.html">İletişim</a></li>
                     <li class="nav-item"><a class="nav-link btn-login active" href="login.php">Login</a></li>
                 </ul>
@@ -30,7 +30,7 @@
         <div class="row justify-content-center mt-4">
             <div class="col-md-5">
                 <div class="card shadow-lg border-0">
-                    <div class="card-header text-center text-white py-3" style="background-color: #001B48;">
+                    <div class="card-header text-center text-white py-3 login-header"></div>
                         <h4 class="mb-0">Öğrenci Girişi</h4>
                     </div>
                     <div class="card-body p-4">
