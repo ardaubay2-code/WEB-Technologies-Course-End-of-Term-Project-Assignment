@@ -6,14 +6,12 @@
     <title>İletişim | Arda Ubay</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <!-- FontAwesome İkonları -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 </head>
 <body class="bg-light">
 
-    <!-- Menü -->
     <nav class="navbar navbar-expand-lg fixed-top custom-navbar">
         <div class="container">
             <a class="navbar-brand fw-bold" href="index.html">ARDA UBAY</a>
@@ -31,54 +29,47 @@
         </div>
     </nav>
 
-    <!-- İçerik Alanı: Vue uygulamasının kapsadığı alan (id="iletisim-app") -->
     <main class="container mt-custom py-5" id="iletisim-app">
         <div class="row justify-content-center">
             <div class="col-lg-8">
                 <div class="card shadow-lg border-0 rounded-lg">
-                    <div class="card-header text-white text-center py-4 iletisim-header"></div>
+                    <div class="card-header text-white text-center py-4 iletisim-header">
                         <h2 class="mb-0 fw-bold"><i class="fa-solid fa-paper-plane me-2"></i>Benimle İletişime Geçin</h2>
                     </div>
                     <div class="card-body p-5 bg-white">
                         
-                        
-                        <form action="iletisim_islem.php" method="POST" id="iletisimFormu" novalidate></form>
+                        <form action="iletisim_islem.php" method="POST" id="iletisimFormu" novalidate>
                             
                             <div class="row">
-                                <!-- Ad (Text) -->
                                 <div class="col-md-6 mb-3">
                                     <div class="form-floating">
-                                        <input type="text" class="form-control" id="ad" v-model="form.ad" placeholder="Adınız">
+                                        <input type="text" class="form-control" id="ad" name="ad" v-model="form.ad" placeholder="Adınız">
                                         <label for="ad">Adınız</label>
                                     </div>
                                 </div>
-                                <!-- Soyad (Text) -->
                                 <div class="col-md-6 mb-3">
                                     <div class="form-floating">
-                                        <input type="text" class="form-control" id="soyad" v-model="form.soyad" placeholder="Soyadınız">
+                                        <input type="text" class="form-control" id="soyad" name="soyad" v-model="form.soyad" placeholder="Soyadınız">
                                         <label for="soyad">Soyadınız</label>
                                     </div>
                                 </div>
                             </div>
 
                             <div class="row">
-                                <!-- E-Posta -->
                                 <div class="col-md-6 mb-3">
                                     <div class="form-floating">
-                                        <input type="email" class="form-control" id="email" v-model="form.email" placeholder="E-Posta Adresiniz">
+                                        <input type="email" class="form-control" id="email" name="email" v-model="form.email" placeholder="E-Posta Adresiniz">
                                         <label for="email">E-Posta</label>
                                     </div>
                                 </div>
-                                <!-- Telefon -->
                                 <div class="col-md-6 mb-3">
                                     <div class="form-floating">
-                                        <input type="tel" class="form-control" id="telefon" v-model="form.telefon" placeholder="05XXXXXXXXX">
+                                        <input type="tel" class="form-control" id="telefon" name="telefon" v-model="form.telefon" placeholder="05XXXXXXXXX">
                                         <label for="telefon">Telefon (Örn: 05554443322)</label>
                                     </div>
                                 </div>
                             </div>
 
-                            <!-- Cinsiyet (Radio Button) -->
                             <div class="mb-3 p-3 border rounded">
                                 <label class="fw-bold mb-2 d-block">Cinsiyetiniz</label>
                                 <div class="form-check form-check-inline">
@@ -91,9 +82,8 @@
                                 </div>
                             </div>
 
-                            <!-- Konu Seçimi (Select) -->
                             <div class="form-floating mb-3">
-                                <select class="form-select" id="konu" v-model="form.konu">
+                                <select class="form-select" id="konu" name="konu" v-model="form.konu">
                                     <option value="" selected disabled>Lütfen bir konu seçin</option>
                                     <option value="İş Teklifi">İş Teklifi / Staj</option>
                                     <option value="Proje İşbirliği">Proje İşbirliği</option>
@@ -102,13 +92,11 @@
                                 <label for="konu">Konu</label>
                             </div>
 
-                            <!-- Mesaj (Textarea) -->
                             <div class="form-floating mb-3">
-                                <textarea class="form-control mesaj-kutusu" placeholder="Mesajınızı buraya yazın" id="mesaj" v-model="form.mesaj"></textarea>
+                                <textarea class="form-control mesaj-kutusu" name="mesaj" placeholder="Mesajınızı buraya yazın" id="mesaj" v-model="form.mesaj"></textarea>
                                 <label for="mesaj">Mesajınız</label>
                             </div>
 
-                            <!-- Sözleşme Onayı (Checkbox) -->
                             <div class="form-check mb-4">
                                 <input class="form-check-input" type="checkbox" id="onay" v-model="form.onay">
                                 <label class="form-check-label" for="onay">
@@ -116,23 +104,19 @@
                                 </label>
                             </div>
 
-                            <!-- Hata Gösterim Alanı (Uyarı Kutusu) -->
                             <div id="hataKutusu" class="alert alert-danger d-none" role="alert"></div>
 
-                            <!-- İKİ FARKLI DENETİM BUTONU -->
                             <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-                                <!-- 1. Native JS Butonu -->
                                 <button class="btn btn-dark px-4" type="button" onclick="nativeJsDenetle()">
                                     <i class="fa-brands fa-js me-2"></i>Native JS Denetle
                                 </button>
-                                <!-- 2. Vue.js Butonu -->
                                 <button class="btn btn-success px-4" type="button" @click="vueJsDenetle">
                                     <i class="fa-brands fa-vuejs me-2"></i>Vue.js Denetle
                                 </button>
                             </div>
 
                         </form>
-                    </div>
+                        </div>
                 </div>
             </div>
         </div>
@@ -142,10 +126,8 @@
         <p class="mb-0 text-muted">&copy; 2026 Arda Ubay - Tüm Hakları Saklıdır.</p>
     </footer>
 
-    <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
-    <!-- 1. NATIVE JAVASCRIPT DENETİM KODLARI -->
     <script>
         function nativeJsDenetle() {
             let hatalar = [];
@@ -191,14 +173,18 @@
                 hataKutusu.classList.remove('d-none');
                 hataKutusu.classList.replace('alert-success', 'alert-danger');
             } else {
-                hataKutusu.innerHTML = "<strong>Native JS:</strong> Form başarıyla doğrulandı ve gönderilmeye hazır!";
+                hataKutusu.innerHTML = "<strong>Native JS:</strong> Form başarıyla doğrulandı, yönlendiriliyorsunuz...";
                 hataKutusu.classList.remove('d-none');
                 hataKutusu.classList.replace('alert-danger', 'alert-success');
+                
+                // 1.5 saniye bekleyip PHP'ye gönderiyor
+                setTimeout(() => {
+                    document.getElementById('iletisimFormu').submit();
+                }, 1500); 
             }
         }
     </script>
 
-    <!-- 2. VUE.JS DENETİM KODLARI (Framework) -->
     <script>
         const { createApp } = Vue;
 
@@ -246,16 +232,21 @@
                         hatalar.push("Telefon 0 ile başlamalı ve 11 haneli olmalıdır.");
                     }
 
-                    // Sonuçları Ekrana Yazdırma (Vue ile klasik DOM manipülasyonu hocanın iki farkı görmesi için iyidir)
+                    // Sonuçları Ekrana Yazdırma
                     let hataKutusu = document.getElementById('hataKutusu');
                     if (hatalar.length > 0) {
                         hataKutusu.innerHTML = "<strong>Vue.js Hataları:</strong><br>" + hatalar.join("<br>");
                         hataKutusu.classList.remove('d-none');
                         hataKutusu.classList.replace('alert-success', 'alert-danger');
                     } else {
-                        hataKutusu.innerHTML = "<strong>Vue.js:</strong> Form başarıyla doğrulandı ve gönderilmeye hazır!";
+                        hataKutusu.innerHTML = "<strong>Vue.js:</strong> Form başarıyla doğrulandı, yönlendiriliyorsunuz...";
                         hataKutusu.classList.remove('d-none');
                         hataKutusu.classList.replace('alert-danger', 'alert-success');
+                        
+                        // 1.5 saniye bekleyip PHP'ye gönderiyor
+                        setTimeout(() => {
+                            document.getElementById('iletisimFormu').submit();
+                        }, 1500);
                     }
                 }
             }
