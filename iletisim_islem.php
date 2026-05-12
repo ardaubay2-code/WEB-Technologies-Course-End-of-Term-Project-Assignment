@@ -14,7 +14,7 @@
             <div class="col-md-8">
                 <div class="card shadow-lg border-0 rounded-lg">
                     
-                    <div class="card-header islem-tablo-baslik text-white text-center py-3">
+                    <div class="card-header islem-tablo-baslik text-primary text-center py-3">
                         <h3 class="mb-0">📬 Form Başarıyla İletildi</h3>
                     </div>
                     
